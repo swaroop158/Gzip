@@ -1,0 +1,12 @@
+npm i pako
+use the below helper class to decompress the data in client.
+
+import * as pako from 'pako';
+ 
+export const CompressionHelper = {
+  GZIPDecompressAndDeserialize: function(data): any{
+    let binData = window.atob(data);
+    var data3 = pako.inflate(binData, { to: 'string' });
+    return JSON.parse(data3);
+  }
+};

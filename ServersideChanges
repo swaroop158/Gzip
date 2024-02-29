@@ -1,4 +1,4 @@
-  public  static class GZipCompressionForPako
+  public  static class GZipCompression
     {
         public static void CopyTo(Stream source, Stream destination)
         {
